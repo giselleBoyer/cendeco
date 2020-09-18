@@ -1,0 +1,814 @@
+/*
+ Theme Name:     Cendeco
+ Theme URI:      https://www.elegantthemes.com/gallery/divi/
+ Description:    Divi Child Theme
+ Author:         Elegant Themes
+ Author URI:     https://www.elegantthemes.com
+ Template:       Divi
+ Version:        1.0.0
+*/
+
+
+/* =Theme customization starts here
+------------------------------------------------------- */
+
+/*
+ * Estilos Generales
+*/
+
+
+/* Menu principal */
+
+
+header#main-header,
+.et-fixed-header#main-header {
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1) !important;
+}
+
+#top-menu li {
+    padding: 0px 1rem !important;
+}
+
+ul:not(.footer-menu) .current_page_item {
+    border-bottom: .25rem solid #ef7c29;
+}
+
+/* Menu segundario */
+
+#menu-social.footer-menu {
+    justify-content: flex-end !important;
+}
+
+#menu-social.footer-menu li {
+    font-size: 1.2rem !important;
+}
+
+/* Footer global */
+
+#main-footer {
+    display: none;
+}
+
+.footer-menu {
+    width: 100% !important;
+    margin: auto !important;
+    padding: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+.footer-menu a {
+    padding: 0px !important;
+    color: #ffffff !important;
+}
+
+/* Slider principal */
+
+.main-full-slider .et_pb_slides>div {
+    min-height: 90vh;
+}
+
+/* botones */
+
+.button-custom{
+    cursor: pointer;
+    border-width: 0px !important;
+    border-radius: 13px;
+    font-size: 16px;
+    background-color: #ef7d29;
+    color: white;
+    padding: .5rem 2rem !important;	
+	text-decoration: none !important;
+	text-decoration-color: #ef7d29 !important;
+}
+.button-custom a {
+	font-size: 16px;
+	color: white;
+	text-decoration: none !important;
+	text-decoration-color: #ef7d29 !important;
+}
+
+/* Titulo con linea horizontal */
+
+.title-line {
+    display: table;
+    white-space: nowrap;
+}
+
+.title-line:after {
+    border-top: 3px solid #eeeff1;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 0.5em;
+    width: 100%;
+    left: 1.5%;
+}
+
+/* Listas con puntos personalizados */
+
+.et_pb_row ul:not(.nav) {
+    list-style: none !important;
+}
+
+.et_pb_row ul:not(.nav) li::before {
+    content: "\2022";
+    color: #ef7d29;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Cards en toda la aplicacion */
+
+.card {
+    height: fit-content;
+}
+
+.card.et_pb_blurb {
+    box-shadow: 0px 12px 18px 1px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card .et_pb_image_wrap {
+    max-width: 100% !important;
+}
+
+.card.et_pb_blurb h2.et_pb_module_header {
+    color: #132633 !important;
+    height: 25%;
+}
+
+.card.et_pb_blurb p {
+    text-align: center;
+}
+
+.card .et_pb_button {
+    background: #ef7d29;
+    margin-top: 1rem;
+    border-radius: 13px;
+    font-size: 16px !important;
+}
+
+/* Hero de paginas */
+
+.hero {
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+.hero h1 {
+    display: table;
+    background: rgba(0, 0, 0, .75);
+    width: auto;
+    padding: .5rem 1rem;
+    margin: auto;
+}
+
+/* Modal */
+html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
+    padding-right: 0px !important;
+}
+
+/*
+ * Pagina de post general
+*/
+
+
+/* contenedor de post de ancho completo */
+
+#main-content>.container:before {
+    width: 0px;
+}
+
+.single #main-content>.container,
+#left-area {
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+}
+
+.single #main-content {
+    padding-top: 0 !important;
+}
+
+/*
+ * Pagina de Search
+*/
+
+/* Grid de Busqueda */
+
+.grid-search {
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 10%;
+    min-height: 50vh;
+    height: 100% !important;
+    display: -ms-grid !important;
+    display: grid !important;
+    grid-gap: 2%;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 30%);
+}
+
+.grid-search>div.entry {
+    width: 100% !important;
+}
+
+.grid-search img {
+    height: 4rem;
+}
+
+.grid-search h2 {
+    font-size: 1rem;
+}
+
+.grid-search p {
+    font-size: .7rem;
+}
+
+/*
+ * Pagina de Catalogo
+*/
+
+/* grib de facultades */
+
+.grid-facultades {
+    padding: 1rem;
+}
+
+.grid-facultades .et_pb_code_inner {
+    height: 100% !important;
+    display: -ms-grid !important;
+    display: grid !important;
+    grid-gap: 2%;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 20.875%);
+}
+
+.grid-facultades .et_pb_code_inner>div {
+    height: 100% !important;
+}
+
+.grid-facultades .et_pb_blurb_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-facultades .et_pb_module img {
+    /*height: 4rem;*/
+    height: 5rem;
+}
+
+.grid-facultades .et_pb_module h2 {
+    /*font-size: .8rem;*/
+    font-size: .9rem;
+}
+
+.grid-facultades .et_pb_module p {
+    /*font-size: .7rem;*/
+    font-size: .8rem;
+}
+
+.grid-facultades .et_pb_main_blurb_image{
+    margin-bottom: 10% !important;
+}
+
+.grid-facultades .et_pb_blurb_container{
+    height: 100%;
+}
+
+/*
+ * Pagina de Facultades
+*/
+
+
+/* listas de diplomados y cursos */
+
+.child-list h1 {
+    color: #ef7d29 !important;
+    line-height: 1.3em;
+}
+
+.child-list ul {
+    color: #ef7d29 !important;
+    font-size: 18px;
+    line-height: 1.9em;
+    text-align: left;
+    list-style-position: inside;
+    padding-left: 2rem !important;
+    padding-bottom: 1em;
+}
+
+.child-list ul a {
+    text-decoration: underline;
+    color: #6b6b6b !important;
+}
+
+
+/*
+ * Pagina de Diplomados y Cursos
+*/
+
+
+/* detalles con titulos personalizados */
+
+.details {
+    width: 73%;
+}
+
+.details h2,
+.details h3 {
+    color: #ef7d29;
+}
+
+.details h3 span {
+    color: #666666 !important;
+    display: inline;
+}
+
+.details span {
+    display: block;
+    margin-bottom: 30px;
+}
+
+/* Boton personalizado del modulo toggle */
+
+.toggle_custom.et_pb_toggle {
+    border: none;
+    border-bottom: 4px solid #ddd !important;
+    transition: 0.4s
+}
+
+.toggle_custom.et_pb_toggle_open {
+    border-bottom: 4px solid #bbb !important;
+}
+
+.toggle_custom .et_pb_toggle_title:before {
+    font-size: 50px !important;
+    content: "3" !important;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.toggle_custom.et_pb_toggle_open .et_pb_toggle_title:before {
+    color: #bbb;
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+/*
+ * Pagina de In Company
+*/
+
+#seccion_in_company h1 {
+    margin-bottom: 1.5rem;
+}
+
+#in_company_img section {
+    height: 450px;
+}
+
+#in_company_img section .header-content h1 {
+    font-size: 48px;
+}
+
+
+/* Formulario de contacto */
+textarea {
+	font-family:"Open Sans",Arial,sans-serif !important;
+}
+#contact_form form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#contact_form form p {
+    width: 48%;
+}
+
+#contact_form form input,
+textarea {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #FCFCFC;
+    box-sizing: border-box;
+    padding: 12px;
+    border: thin solid #E9E9E9;
+}
+
+#contact_form form p:nth-child(6n) {
+    width: 100% !important;
+}
+
+
+#contact_form form input[type="submit"] {
+    display: block;
+    border: none;
+    width: 70px;
+    background: #ED8200;
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/*
+ * Pagina Contáctanos
+*/
+
+
+#contact_form {
+    width: 100%;
+}
+
+/* Campus card */
+
+#campus_card {
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+#campus_card h3 {
+    color: #ED8200;
+}
+
+#campus_card div {
+    margin-top: 5px;
+}
+
+#campus_card label {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+}
+
+#campus_card p {
+    padding: .5rem 0 0 0;
+}
+
+/*
+ * Pagina Eventos
+*/
+
+/* Grid Eventos */
+.grid-event {
+    padding: 1rem;
+}
+
+.grid-event .et_pb_code_inner {
+    height: 100% !important;
+    display: grid !important;
+    grid-gap: 2%;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 30%);
+}
+
+.grid-event .et_pb_code_inner>div {
+    height: 100% !important;
+}
+
+/* Event card */
+
+.event {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+    background-color: #fff;
+    transition: box-shadow .25s;
+    border-radius: .2rem;
+    overflow: hidden;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.event .event-image img {
+    display: block;
+    border-radius: .2rem .2rem 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 220px;
+}
+
+.event .event-content {
+    height: 100%;
+    display: flex;
+    border-radius: 0 0 .2rem .2rem;
+}
+
+.event-content .event-title {
+    line-height: 1.5rem;
+    text-align: left;
+    padding: .5rem;
+    font-style: italic;
+}
+
+.event-date {
+    background-color: #ef7d29;
+    color: white;
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .3s ease-out;
+}
+
+.event-date span {
+    line-height: 1rem;
+    display: block;
+    text-align: center;
+}
+
+.event-date .month {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.event:hover .event-date {
+    padding: .5rem;
+}
+
+
+/* Event full */
+
+.event-full {
+    overflow: hidden;
+}
+
+.event-full .event-content>p {
+    font-size: 16px !important;
+    text-align: justify;
+}
+
+.event-full .event-image {
+    width: 50%;
+    float: left;
+    position: relative;
+    margin-right: 1rem;
+}
+
+.event-full .event-image .event-date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+}
+
+.event-full .event-date {
+    padding: .5rem 1.5rem;
+}
+
+.event-full .event-date span {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
+
+/* Pagina individual de Eventos*/
+
+article.evento.type-evento div.entry-content {
+    margin: 12% 5% 5% 5%;
+}
+
+
+/*
+ * Pagina campus
+*/
+
+#cards-container-campus .et_pb_blurb {
+    height: 100% !important;
+}
+
+
+/*
+ * Responsive
+*/
+
+/* In Company */
+
+
+@media (min-width: 320px) {
+    #in_company_img section {
+        height: 300px;
+    }
+
+    #in_company_img section .header-content h1 {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 576px) {
+    #in_company_img section {
+        height: 650px;
+    }
+
+    #in_company_img section .header-content h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 640px) {
+    #seccion_in_company h1 {
+        font-size: 1.4rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    #in_company_img section {
+        height: 260px;
+    }
+
+    #in_company_img section .header-content h1 {
+        font-size: 38px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #in_company_img section {
+        height: 350px;
+    }
+
+    #in_company_img section .header-content h1 {
+        font-size: 48px;
+    }
+}
+
+/* Catáctanos*/
+
+@media (max-width: 992px) {
+    #seccion_contactanos .et_pb_column_1 {
+        order: 2;
+    }
+
+    #contact_form form p {
+        width: 100% !important;
+    }
+}
+
+
+/* Grid Facultades*/
+
+@media (max-width: 1024px) {
+    .grid-facultades .et_pb_code_inner {
+        grid-template-columns: repeat(3, 30%) !important;
+    }
+}
+
+@media (max-width: 980px) {
+    .grid-facultades .et_pb_code_inner {
+        grid-template-columns: repeat(2, 47.30%) !important;
+    }
+}
+
+@media (max-width: 479px) {
+    .grid-facultades .et_pb_code_inner {
+        grid-gap: 1rem;
+        grid-template-columns: 100% !important;
+    }
+}
+
+/* Grid Eventos */
+
+@media (max-width: 980px) {
+    .grid-event .et_pb_code_inner {
+        grid-gap: 1rem;
+        justify-content: center;
+        grid-template-columns: 100% !important;
+    }
+}
+
+
+/* Pagina Eventos */
+
+@media (max-width: 425px) {
+
+    .event .event-image img {
+        height: 150px;
+    }
+
+    .event-full .event-image {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 1rem;
+    }
+
+    .event-full .event-date {
+        padding: .5rem .7rem;
+    }
+
+    .event-full .event-date span {
+        font-size: .7rem;
+        line-height: 0.7;
+    }
+}
+
+#seccion_suscripcion .et_pb_header_content_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Pagina de Busqueda */
+@media (max-width: 980px) {
+    .grid-search {
+        justify-content: center;
+        grid-template-columns: 45%;
+    }
+}
+
+@media (max-width: 479px) {
+    .grid-search {
+        grid-gap: 1rem;
+        grid-template-columns: 100%;
+    }
+}
+
+/* Fotter Global */
+
+@media (max-width: 980px) {
+    #menu-social.footer-menu {
+        justify-content: center !important;
+    }
+}
+
+/* Titulo con line horizontal */
+
+@media (max-width: 980px) {
+    .title-line {
+        display: block;
+        white-space: normal !important;
+    }
+
+    .title-line:after {
+        border-top: 3px solid #eeeff1;
+        content: '';
+        display: block;
+        position: relative;
+        top: 0.5em;
+        width: 100%;
+        left: 1.5%;
+        padding-bottom: 1.5rem;
+    }
+}
+
+/* Campus */
+
+
+/* Slider */
+
+#seccion_campus .et_pb_container .clearfix .et_pb_empty_slide {
+    height: auto;
+}
+
+#seccion_campus .et_pb_slide {
+    padding: 0;
+}
+
+#seccion_campus .et_pb_slide_image {
+    margin: 0 !important;
+}
+
+#seccion_campus .et_pb_slide_image img {
+    max-height: 100% !important;
+    width: 100%;
+}
+
+#seccion_campus .et_pb_slide_description {
+    padding: 0;
+}
+
+#seccion_campus .et_pb_slide_image {
+    width: 100% !important;
+    position: initial !important;
+}
+
+/* Quienes somos */
+
+@media (max-width: 980px) {
+    #cards-container-our .et_pb_column>.et_pb_module {
+        width: 100%;
+    }
+}
+
+
+/* Pagina de Diplomados y Cursos */
+
+@media (max-width: 1024px) {
+    .details {
+        width: 100%;
+    }
+}
